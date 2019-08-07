@@ -1,0 +1,14 @@
+@import "../../shared/variables";
+
+.item {
+  a {
+    color: $color-font;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      background-color: $color-border-200;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../shared/variables";
+
+.menu {
+  background-color: $color-base;
+  border-right: 1px solid $color-border-400;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  position: fixed;
+  height: 100%;
+  list-style: none;
+  width: 280px;
+}

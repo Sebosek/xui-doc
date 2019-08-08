@@ -1,14 +1,19 @@
-import React from 'react';
-import './MenuItem.scss';
+import React, { FunctionComponent } from 'react';
+import styles from './MenuItem.module.scss';
 
-interface MenuDeclaration {
+interface MenuProps {
   label: String;
+  icon?: JSX.Element;
 }
 
-const MenuItem: React.FunctionComponent<MenuDeclaration> = (dec: MenuDeclaration) => {
+const MenuItem: FunctionComponent<MenuProps> = ({ label, icon, children }) => {
   return (
-    <li className="item">
-      <a href="#">{dec.label}</a>
+    <li className={styles.item}>
+      <button>
+        {icon && <span className={styles.icon}>{ icon }</span>}
+        <span className={styles.label}>{ label }</span>
+      </button>
+      {children && <div className={styles.content}>{ children }</div>}
     </li>
   );
 }

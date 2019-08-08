@@ -1,0 +1,24 @@
+@import "../../shared/variables";
+
+.column {
+  //padding: 0 16px;
+  margin-right: 72px;
+  width: auto;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  h3 {
+    font-size: $font-size-regular;
+    white-space: nowrap;
+    margin: 0 0 20px;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+}

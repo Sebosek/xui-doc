@@ -3,12 +3,22 @@
 .menu {
   background-color: $color-base;
   border-right: 1px solid $color-border-400;
-  list-style: none;
-  position: relative;
   margin: 0;
   padding-left: 0;
   position: fixed;
   height: 100%;
   list-style: none;
   width: 280px;
+  z-index: 1;
+  transition: width 300ms;
+}
+
+@media only screen and (max-width: 1200px) {
+  .menu {
+    width: 64px;
+
+    &:hover {
+      width: 280px;
+    }
+  }
 }

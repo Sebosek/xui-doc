@@ -1,0 +1,53 @@
+@import "../../shared/variables";
+
+.item {
+  position: relative;
+
+  &:hover {
+    .content {
+      display: block;
+    }
+  }
+  
+  button {
+    align-items: center;
+    background: transparent;
+    color: $color-font;
+    display: flex;
+    border: none;
+    font-size: $font-size-regular;
+    padding: 16px 20px;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background-color: $color-border-200;
+    }
+
+    .label {
+      overflow: hidden;
+      // text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .icon {
+      $size: 24px;
+
+      display: inline-block;
+      margin-right: 8px;
+
+      > svg {
+        display: block;
+        height: $size;
+        width: $size;
+      }
+    }
+  }
+
+  .content {
+    display: none;
+    position: absolute;
+    left: calc(100% - 4px);
+    top: 0;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../shared/variables";
+
+.components {
+  background: $color-base;
+  border: 1px solid $color-border-400;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  box-shadow: 0px 8px 12px -4px $color-border-300;
+  z-index: 2;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  &:before {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid $color-border-400;
+    right: 100%;
+    top: 28px;
+    transform: translateY(-50%);
+  }
+
+  &:after {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid $color-base;
+    right: calc(100% - 1px);
+    top: 28px;
+    transform: translateY(-50%);
+  }
+}

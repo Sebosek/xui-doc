@@ -1,7 +1,8 @@
 @import "../../shared/variables";
 
 .wrapper {
-  background-color: $color-border-200;
+  background-color: $color-base;
+  // background-color: $color-border-200;
   height: 100%;
   overflow: auto;
 

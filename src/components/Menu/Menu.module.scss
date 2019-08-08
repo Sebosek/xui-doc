@@ -1,16 +1,24 @@
 @import "../../shared/variables";
 
-.menu {
-  background-color: $color-base;
+.wrapper {
+  background-color: $color-border-200;
+  // background-color: $color-base;
   border-right: 1px solid $color-border-400;
-  margin: 0;
-  padding-left: 0;
-  position: fixed;
   height: 100%;
-  list-style: none;
+  position: fixed;
+  transition: width 300ms;
   width: 280px;
   z-index: 1;
-  transition: width 300ms;
+
+  .menu {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1200px) {

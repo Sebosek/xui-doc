@@ -10,37 +10,39 @@ import WebComponents from '../WebComponents/WebComponents';
 
 const Menu: FunctionComponent = () => {
   return (
-    <ul className={styles.menu}>
-      <MenuItem 
-        label="Introduction"
-        path="/introduction"
-        icon={<Intro />}
-      />
-      <MenuItem 
-        label="Components"
-        path="/components"
-        icon={<Components />}
-      >
-        <WebComponents>
-          <ComponentList title="Common">
-            <Component name="Avatar" />
-          </ComponentList>
-          <ComponentList title="Forms">
-            <Component name="Button" />
-            <Component name="Input" />
-          </ComponentList>
-          <ComponentList title="Structural">
-            <Component name="Form control" />
-            <Component name="Form item" />
-          </ComponentList>
-        </WebComponents>
-      </MenuItem>
-      <MenuItem
-        label="About"
-        path="/about"
-        icon={<About />}
-      />
-    </ul>
+    <div className={styles.wrapper}>
+      <ul className={styles.menu}>
+        <MenuItem 
+          label="Introduction"
+          path="/"
+          icon={<Intro />}
+        />
+        <MenuItem 
+          label="Components"
+          path="/components"
+          icon={<Components />}
+        >
+          <WebComponents>
+            <ComponentList title="Common">
+              <Component name="Avatar" />
+            </ComponentList>
+            <ComponentList title="Forms">
+              <Component name="Button" />
+              <Component name="Input" />
+            </ComponentList>
+            <ComponentList title="Structural">
+              <Component name="Form control" />
+              <Component name="Form item" />
+            </ComponentList>
+          </WebComponents>
+        </MenuItem>
+        <MenuItem
+          label="About"
+          path="/about"
+          icon={<About />}
+        />
+      </ul>
+    </div>
   );
 }
 

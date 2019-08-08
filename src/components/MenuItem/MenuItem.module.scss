@@ -9,37 +9,49 @@
     }
   }
   
-  button {
+  a {
     align-items: center;
     background: transparent;
-    color: $color-font;
+    border: none;
+    color: $color-border-800;
     display: flex;
     border: none;
-    font-size: $font-size-regular;
+    font-size: $font-size-base;
     padding: 16px 20px;
     text-decoration: none;
-    width: 100%;
 
     &:hover {
       background-color: $color-border-200;
+    }
+
+    &.active {
+      color: $color-font;
+      font-weight: 500;
+
+      .icon > svg {
+        fill: $color-font;
+      }
     }
 
     .label {
       overflow: hidden;
       // text-overflow: ellipsis;
       white-space: nowrap;
+      margin-bottom: 2px;
     }
 
     .icon {
-      $size: 24px;
+      $size: 16px;
 
-      display: inline-block;
-      margin-right: 8px;
+      align-items: center;
+      display: inline-flex;
+      margin-right: 12px;
 
       > svg {
         display: block;
         height: $size;
         width: $size;
+        fill: $color-border-800;
       }
     }
   }

@@ -9,31 +9,29 @@ import About from '../../pages/About/About';
 import NotFound from '../../pages/NotFound/NotFound';
 
 const routes = (
-  <BrowserRouter>
-    <Switch>
-      <Route
-        path="/"
-        component={Introduction}
-        exact
-      />
-      <Route
-        path="/components"
-        component={Components}
-      />
-      <Route
-        path="/about"
-        component={About}
-      />
-      <Route
-        component={NotFound}
-      />
-    </Switch>
-  </BrowserRouter>
+  <Switch>
+    <Route
+      path="/"
+      component={Introduction}
+      exact
+    />
+    <Route
+      path="/components"
+      component={Components}
+    />
+    <Route
+      path="/about"
+      component={About}
+    />
+    <Route
+      component={NotFound}
+    />
+  </Switch>
 );
 
 const App: React.FC = () => {
   return (
-    <>
+    <BrowserRouter>
       <Menu />
       <div className={styles.wrapper}>
         <div className={styles.content}>
@@ -46,7 +44,7 @@ const App: React.FC = () => {
           </xui-grid>
         </div>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 

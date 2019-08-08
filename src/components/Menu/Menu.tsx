@@ -13,10 +13,12 @@ const Menu: FunctionComponent = () => {
     <ul className={styles.menu}>
       <MenuItem 
         label="Introduction"
+        path="/introduction"
         icon={<Intro />}
       />
       <MenuItem 
         label="Components"
+        path="/components"
         icon={<Components />}
       >
         <WebComponents>
@@ -35,6 +37,7 @@ const Menu: FunctionComponent = () => {
       </MenuItem>
       <MenuItem
         label="About"
+        path="/about"
         icon={<About />}
       />
     </ul>

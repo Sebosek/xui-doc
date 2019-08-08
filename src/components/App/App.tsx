@@ -1,22 +1,50 @@
 import React from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 import Menu from '../Menu/Menu';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Introduction from '../../pages/Introduction/Introduction';
+import Components from '../../pages/Components/Components';
+import About from '../../pages/About/About';
+import NotFound from '../../pages/NotFound/NotFound';
+
+const routes = (
+  <BrowserRouter>
+    <Switch>
+      <Route
+        path="/"
+        component={Introduction}
+        exact
+      />
+      <Route
+        path="/components"
+        component={Components}
+      />
+      <Route
+        path="/about"
+        component={About}
+      />
+      <Route
+        component={NotFound}
+      />
+    </Switch>
+  </BrowserRouter>
+);
 
 const App: React.FC = () => {
   return (
     <>
       <Menu />
-      <div className="content">
-        <xui-grid 
-          style={{
-            margin: '0 auto',
-            maxWidth: '980px',
-          }}
-        >
-          <xui-grid-column>
-            <xui-text>Content</xui-text>
-          </xui-grid-column>
-        </xui-grid>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          { routes }
+
+          <xui-grid>
+            <xui-grid-column>
+              <xui-text>Content</xui-text>
+            </xui-grid-column>
+          </xui-grid>
+        </div>
       </div>
     </>
   );

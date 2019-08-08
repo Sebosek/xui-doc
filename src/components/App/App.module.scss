@@ -1,6 +1,12 @@
 @import "../../shared/variables";
 
-.content {
+.wrapper {
   background-color: $color-border-200;
   height: 100%;
+  overflow: auto;
+
+  .content {
+    margin: 0 auto;
+    max-width: 980px;
+  }
 }

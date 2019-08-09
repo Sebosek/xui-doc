@@ -24,15 +24,30 @@ const Menu: FunctionComponent = () => {
         >
           <WebComponents>
             <ComponentList title="Common">
-              <ComponentLink name="Avatar" />
+              <ComponentLink 
+                name="Avatar"
+                path="avatar"
+              />
             </ComponentList>
             <ComponentList title="Forms">
-              <ComponentLink name="Button" />
-              <ComponentLink name="Input" />
+              <ComponentLink
+                name="Button"
+                path="button"
+              />
+              <ComponentLink
+                name="Input"
+                path="input"
+              />
             </ComponentList>
             <ComponentList title="Structural">
-              <ComponentLink name="Form control" />
-              <ComponentLink name="Form item" />
+              <ComponentLink 
+                name="Form control"
+                path="form-control"
+              />
+              <ComponentLink
+                name="Form item"
+                path="form-item"
+              />
             </ComponentList>
           </WebComponents>
         </MenuItem>

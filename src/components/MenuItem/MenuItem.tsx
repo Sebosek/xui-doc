@@ -12,6 +12,7 @@ const MenuItem: FunctionComponent<MenuProps> = ({ label, path, icon, children })
   return (
     <li className={styles.item}>
       <NavLink 
+        className={styles.link}
         to={path}
         activeClassName={styles.active}
         exact

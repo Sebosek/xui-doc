@@ -7,6 +7,7 @@ import Introduction from '../../pages/Introduction/Introduction';
 import Components from '../../pages/Components/Components';
 import About from '../../pages/About/About';
 import NotFound from '../../pages/NotFound/NotFound';
+import Component from '../../pages/Component/Component';
 
 const routes = (
   <Switch>
@@ -18,6 +19,10 @@ const routes = (
     <Route
       path="/components"
       component={Components}
+    />
+    <Route
+      path="/component/:name"
+      component={Component}
     />
     <Route
       path="/about"

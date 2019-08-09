@@ -1544,10 +1544,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@xui/components@0.1.0-alpha.20190807.1":
-  version "0.1.0-alpha.20190807.1"
-  resolved "https://www.myget.org/F/xui-components/npm/@xui/components/-/@xui/components-0.1.0-alpha.20190807.1.tgz#157973a58b9bbd7a4b2ab176673b08f6f8029d6e"
-  integrity sha1-FXlzpYubvXpLKrF2ZzsI9vgCnW4=
+"@xui/components@0.1.0-alpha.20190808.4":
+  version "0.1.0-alpha.20190808.4"
+  resolved "https://www.myget.org/F/xui-components/npm/@xui/components/-/@xui/components-0.1.0-alpha.20190808.4.tgz#ad2ffcc3ab8addfa5a16dbc89158e0c6bc94fb59"
+  integrity sha1-rS/8w6uK3fpaFtvIkVjgxryU+1k=
 
 abab@^2.0.0:
   version "2.0.0"

@@ -2,7 +2,6 @@
 
 .wrapper {
   background-color: $color-border-200;
-  // background-color: $color-base;
   border-right: 1px solid $color-border-400;
   height: 100%;
   position: fixed;
@@ -22,8 +21,8 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .menu {
-    width: 64px;
+  .wrapper {
+    width: 60px;
 
     &:hover {
       width: 280px;

@@ -5,7 +5,7 @@ import { ReactComponent as Intro } from './rocket.svg';
 import { ReactComponent as Components } from './dashboard.svg';
 import { ReactComponent as About } from './bookmark.svg';
 import ComponentList from '../ComponentList/ComponentList';
-import Component from '../Component/Component';
+import ComponentLink from '../ComponentLink/ComponentLink';
 import WebComponents from '../WebComponents/WebComponents';
 
 const Menu: FunctionComponent = () => {
@@ -24,15 +24,15 @@ const Menu: FunctionComponent = () => {
         >
           <WebComponents>
             <ComponentList title="Common">
-              <Component name="Avatar" />
+              <ComponentLink name="Avatar" />
             </ComponentList>
             <ComponentList title="Forms">
-              <Component name="Button" />
-              <Component name="Input" />
+              <ComponentLink name="Button" />
+              <ComponentLink name="Input" />
             </ComponentList>
             <ComponentList title="Structural">
-              <Component name="Form control" />
-              <Component name="Form item" />
+              <ComponentLink name="Form control" />
+              <ComponentLink name="Form item" />
             </ComponentList>
           </WebComponents>
         </MenuItem>

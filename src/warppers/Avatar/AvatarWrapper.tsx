@@ -1,16 +1,9 @@
-/* eslint import/no-webpack-loader-syntax: off */
-
 import React, { FunctionComponent, useState, useEffect, useRef } from 'react';
 import raw from 'raw.macro';
 import ReactMarkdown from 'react-markdown';
 import SampleBox from '../../components/SampleBox/SampleBox';
 
 type AvatarSize = 'xs' | 's' | 'm' | 'l' | 'xl' | undefined;
-
-interface Size {
-  value: string;
-  label: string;
-}
 
 const markdown = raw('Avatar.md');
 const sizes = [{
@@ -62,7 +55,7 @@ const AvatarWrapper: FunctionComponent = () => {
     cbx.addEventListener('changed', handleCheckbox);
 
     const els: HTMLXuiRadioElement[] = [];
-    refs.map(ref => {
+    refs.forEach(ref => {
       const el = ref.current as unknown as HTMLXuiRadioElement;
 
       els.push(el);
@@ -71,11 +64,11 @@ const AvatarWrapper: FunctionComponent = () => {
 
     return () => {
       cbx.removeEventListener('changed', handleCheckbox);
-      els.map(el => {
+      els.forEach(el => {
         el.removeEventListener('selected', handleSelect);
       });
     };
-  }, []);
+  }, [refs]);
 
   return (
     <>

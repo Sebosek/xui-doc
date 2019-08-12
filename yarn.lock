@@ -1544,10 +1544,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@xui/components@0.1.0-alpha.20190808.4":
-  version "0.1.0-alpha.20190808.4"
-  resolved "https://www.myget.org/F/xui-components/npm/@xui/components/-/@xui/components-0.1.0-alpha.20190808.4.tgz#ad2ffcc3ab8addfa5a16dbc89158e0c6bc94fb59"
-  integrity sha1-rS/8w6uK3fpaFtvIkVjgxryU+1k=
+"@xui/components@0.1.0-alpha.20190812.2":
+  version "0.1.0-alpha.20190812.2"
+  resolved "https://www.myget.org/F/xui-components/npm/@xui/components/-/@xui/components-0.1.0-alpha.20190812.2.tgz#e2d99847f00aaecae9a080fe09cc380b77f7aa11"
+  integrity sha1-4tmYR/AKrsrpoID+Ccw4C3f3qhE=
 
 abab@^2.0.0:
   version "2.0.0"
@@ -5965,6 +5965,11 @@ jsx-ast-utils@^2.0.1:
   integrity sha512-yDGDG2DS4JcqhA6blsuYbtsT09xL8AoLuUR2Gb5exrw7UEM19sBcOTq+YBBhrNbl0PUC4R4LnFu+dHg2HKeVvA==
   dependencies:
     array-includes "^3.0.3"
+
+jsx-native-events@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/jsx-native-events/-/jsx-native-events-1.0.2.tgz#eb02dc471d5e67338e99aa2e9b37073ecdb0a0a0"
+  integrity sha512-Tq0y2fsqmp3nGt1pqr/zHIGzaRLCilUdtVCJdthe8dbZfUayNkRqQuqZNMUCNbUXzACZf2INJmc2AVfizuxD6Q==
 
 killable@^1.0.0:
   version "1.0.1"

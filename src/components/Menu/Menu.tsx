@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import classNames from 'classnames';
 import styles from './Menu.module.scss';
 import MenuItem from '../MenuItem/MenuItem';
 import { ReactComponent as Intro } from './rocket.svg';
@@ -8,9 +9,18 @@ import ComponentList from '../ComponentList/ComponentList';
 import ComponentLink from '../ComponentLink/ComponentLink';
 import WebComponents from '../WebComponents/WebComponents';
 
-const Menu: FunctionComponent = () => {
+interface MenuProps {
+  openable?: boolean;
+}
+
+const Menu: FunctionComponent<MenuProps> = ({ openable = false }) => {
   return (
-    <div className={styles.wrapper}>
+    <div 
+      className={classNames(
+        styles.wrapper,
+        openable && styles.openable
+      )}
+    >
       <ul className={styles.menu}>
         <MenuItem 
           label="Introduction"

@@ -6,7 +6,7 @@
   height: 100%;
   position: fixed;
   transition: width 300ms;
-  width: 280px;
+  width: 200px;
   z-index: 1;
 
   .menu {
@@ -24,8 +24,8 @@
   .wrapper {
     width: 60px;
 
-    &:hover {
-      width: 280px;
+    &.openable:hover {
+      width: 200px;
     }
   }
 }

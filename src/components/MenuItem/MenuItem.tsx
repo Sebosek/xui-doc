@@ -17,13 +17,15 @@ const MenuItem: FunctionComponent<MenuProps> = ({ label, path, icon, children })
         activeClassName={styles.active}
         exact
       >
-        {icon && <span className={styles.icon}>{ icon }</span>}
+        {icon && (
+          <xui-tooltip
+            text={ label }
+          >
+            <span className={styles.icon}>{ icon }</span>
+          </xui-tooltip>
+        )}
         <span className={styles.label}>{ label }</span>
       </NavLink>
-      {/* <button>
-        {icon && <span className={styles.icon}>{ icon }</span>}
-        <span className={styles.label}>{ label }</span>
-      </button> */}
       {children && <div className={styles.content}>{ children }</div>}
     </li>
   );

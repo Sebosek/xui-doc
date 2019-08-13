@@ -1,10 +1,51 @@
 @import "../../shared/variables";
 
-.sample {
-  align-items: center;
-  display: flex;
-  height: 240px;
+.box {
   border: 1px solid $color-border-300;
   border-radius: 4px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 240px;
+
+  .sample {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 48px auto;
+    min-height: 128px;
+  }
+
+  .control {
+    border-top: 1px solid $color-border-300;
+    color: $color-border-600;
+    cursor: pointer;
+    display: block;
+    font-size: $font-size-base;
+    font-weight: 500;
+    margin: 0 48px;
+    padding: 16px 0;
+    text-align: center;
+    text-transform: lowercase;
+    transition: color 300ms;
+
+    &:hover {
+      color: $color-font;
+    }
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: row;
+    margin: 0 48px 40px;
+    padding: 0 16px;
+
+    .column {
+      margin-right: 72px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

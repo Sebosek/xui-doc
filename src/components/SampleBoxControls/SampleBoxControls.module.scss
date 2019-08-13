@@ -1,0 +1,10 @@
+@import "../../shared/variables";
+
+h3 {
+  color: $color-font;
+  font-weight: 500;
+  font-size: $font-size-base;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 2;
+}

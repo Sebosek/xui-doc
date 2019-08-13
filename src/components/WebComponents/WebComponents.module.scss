@@ -1,13 +1,21 @@
 @import "../../shared/variables";
 
+.wrapper {
+  display: flex;
+  padding: 40px 40px 40px 0;
+  position: relative;
+  top: -40px;
+}
+
 .components {
   background: $color-base;
   border: 1px solid $color-border-400;
   border-radius: 4px;
+  box-shadow: 0px 8px 12px -4px $color-border-300;
   display: flex;
   flex-direction: row;
   padding: 40px;
-  box-shadow: 0px 8px 12px -4px $color-border-300;
+  position: relative;
   z-index: 2;
 
   &:before,

@@ -1,17 +1,22 @@
 import React, { FunctionComponent } from 'react';
-import AvatarDetail from '../../details/Avatar/AvatarDetail';
+import Links from '../../links';
+import Undefined from '../../details/Undefined';
 
 const Component: FunctionComponent = (props) => {
   const { match } = props as any;
   const { params } = match;
+  const name = params.name;
+  const link = Links[name];
+  
+  if (!link) {
+    return <Undefined />
+  }
 
+  const Child = link.child;
   return (
-    <>
-      <h1>Component</h1>
-      <span>Current component <b>{ params.name }</b></span>
-
-      <AvatarDetail />
-    </>
+    <div>
+      <Child />
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ interface CheckboxProps {
   onChanged?: (input: HTMLXuiCheckboxElement) => void;
 }
 
-const CheckboxWrapper: FunctionComponent<HTMLAttributes<HTMLElement> & CheckboxProps> = ({
+const CheckboxWrapper: FunctionComponent<CheckboxProps & HTMLAttributes<HTMLElement>> = ({
   name,
   checked = false,
   intermediate = false,
@@ -21,7 +21,7 @@ const CheckboxWrapper: FunctionComponent<HTMLAttributes<HTMLElement> & CheckboxP
   state = 'normal',
   tabIndex = 0,
   onChanged,
-  slot,
+  ...rest
 }) => {
   const checboxRef = useRef<HTMLXuiCheckboxElement>(null);
 
@@ -52,7 +52,7 @@ const CheckboxWrapper: FunctionComponent<HTMLAttributes<HTMLElement> & CheckboxP
       tabIndex={tabIndex}
       state={state}
       ref={checboxRef}
-      slot={slot}
+      slot={rest.slot}
     ></xui-checkbox>
   );
 };

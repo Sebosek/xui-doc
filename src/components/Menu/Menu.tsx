@@ -38,15 +38,79 @@ const Menu: FunctionComponent<MenuProps> = ({ openable = false }) => {
                 name="Avatar"
                 path="avatar"
               />
+              <ComponentLink 
+                name="Callout"
+                path="callout"
+              />
+              <ComponentLink 
+                name="Caption"
+                path="caption"
+              />
+              <ComponentLink 
+                name="Grid"
+                path="grid"
+              />
+              <ComponentLink 
+                name="Label"
+                path="label"
+              />
+              <ComponentLink 
+                name="Link"
+                path="link"
+              />
+              <ComponentLink 
+                name="Loading"
+                path="loading"
+              />
+              <ComponentLink 
+                name="Menu"
+                path="menu"
+              />
+              <ComponentLink 
+                name="Over element"
+                path="over-element"
+              />
+              <ComponentLink 
+                name="Popover"
+                path="popover"
+              />
+              <ComponentLink 
+                name="Tabs"
+                path="tabs"
+              />
+              <ComponentLink 
+                name="Title"
+                path="title"
+              />
+              <ComponentLink 
+                name="Tooltip"
+                path="tooltip"
+              />
             </ComponentList>
             <ComponentList title="Forms">
               <ComponentLink
                 name="Button"
                 path="button"
               />
+              <ComponentLink 
+                name="Checkbox"
+                path="checkbox"
+              />
               <ComponentLink
                 name="Input"
                 path="input"
+              />
+              <ComponentLink 
+                name="Password"
+                path="password"
+              />
+              <ComponentLink 
+                name="Radio"
+                path="radio"
+              />
+              <ComponentLink 
+                name="Toggle"
+                path="toggle"
               />
             </ComponentList>
             <ComponentList title="Structural">

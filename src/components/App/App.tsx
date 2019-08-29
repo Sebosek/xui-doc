@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './App.module.scss';
-import Menu from '../Menu/Menu';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Introduction from '../../pages/Introduction/Introduction';
@@ -8,6 +7,7 @@ import Components from '../../pages/Components/Components';
 import About from '../../pages/About/About';
 import NotFound from '../../pages/NotFound/NotFound';
 import Component from '../../pages/Component/Component';
+import Menu from '../HorizontalMenu/Menu';
 
 const routes = (
   <Switch>

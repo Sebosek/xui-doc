@@ -18,6 +18,14 @@
   position: relative;
   z-index: 2;
 
+  > div {
+    margin-right: 72px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &:before,
   &:after {
     content: '';

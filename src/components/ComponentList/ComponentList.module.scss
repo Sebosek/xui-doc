@@ -1,13 +1,7 @@
 @import "../../shared/variables";
 
 .column {
-  //padding: 0 16px;
-  margin-right: 72px;
   width: auto;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   h3 {
     font-size: $font-size-regular;

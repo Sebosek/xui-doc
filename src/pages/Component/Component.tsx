@@ -6,6 +6,9 @@ const Component: FunctionComponent = (props) => {
   const { match } = props as any;
   const { params } = match;
   const name: DefinedComponent = params.name;
+  
+  console.log(name);
+  console.dir(Links);
   const link = Links[name];
   
   if (!link) {

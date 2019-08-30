@@ -11,7 +11,7 @@ const ComponentLink: FunctionComponent<ComponentLinkProps> = ({ name, path }) =>
   <Route render={({ history }) => (
     <li className={styles.name}>
       <xui-link
-        onClick={() => history.push(`/component/${path}`)}
+        onClick={() => history.push(`/component/${path || name}`)}
       >{ name }</xui-link>
     </li>
   )} />

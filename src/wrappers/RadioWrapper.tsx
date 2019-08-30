@@ -4,7 +4,7 @@ import { state } from '@xui/components/dist/types/components/shared/state';
 interface RadioProps {
   name?: string;
   checked?: boolean;
-  value?: string | number | null;
+  value?: string | number;
   disabled?: boolean;
   state?: state;
   tabIndex?: number;

@@ -1,13 +1,20 @@
 @import "../../shared/variables";
 
-.wrapper {
-  background-color: $color-base;
-  // background-color: $color-border-200;
-  height: 100%;
-  overflow: auto;
+.root {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  .content {
-    margin: 0 auto;
-    max-width: 980px;
+  .wrapper {
+    background-color: $color-base;
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+  
+    .content {
+      margin: 0 auto;
+      max-width: 980px;
+    }
   }
 }

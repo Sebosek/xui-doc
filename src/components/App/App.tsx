@@ -37,7 +37,8 @@ const routes = (
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className={styles.root}>
+      <ToastController />
       <BrowserRouter>
         <Menu />
         <div className={styles.wrapper}>
@@ -52,8 +53,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </BrowserRouter>
-      <ToastController />
-    </>
+    </div>
   );
 }
 

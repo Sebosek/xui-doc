@@ -16,11 +16,6 @@
     .children {
       display: flex;
     }
-
-    .chevron {
-      height: 20px;
-      width: 20px;
-    }
   }
 
   .link {
@@ -50,23 +45,12 @@
   }
   
   .children {
+    background: $color-base;
     display: none;
     padding: 40px 0;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-  }
-
-  .chevron {
-    display: block;
-    height: 12px;
-    width: 12px;
-    position: absolute;
-    top: calc(100% - 12px);
-    left: 50%;
-    transform: translateX(-50%);
-    fill: var(--xui-doc--icon);
-    transition: 300ms fill, 300ms height, 300ms width;
   }
 }

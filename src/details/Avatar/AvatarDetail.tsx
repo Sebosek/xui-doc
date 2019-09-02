@@ -1,7 +1,8 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState, useRef, useEffect } from 'react';
 import raw from 'raw.macro';
 import ReactMarkdown from 'react-markdown';
 import { size } from '@xui/components/dist/types/components/avatar/avatar.size';
+import { showToast } from '@xui/components/dist/collection/utils/toasts';
 import SampleBox from '../../components/SampleBox/SampleBox';
 import InputWrapper from '../../wrappers/InputWrapper';
 import SampleBoxControls from '../../components/SampleBoxControls/SampleBoxControls';
@@ -37,6 +38,18 @@ const AvatarDetail: FunctionComponent = () => {
   const [ size, setSize ] = useState(sizes[Math.floor(sizes.length / 2)]);
   const [ imageEnabled, setImageEnabled ] = useState(false);
   const [ imageSource, setImageSource ] = useState('https://i.pravatar.cc/128');
+  const avatarRef = useRef<HTMLXuiAvatarElement>(null);
+
+  useEffect(() => {
+    if (avatarRef.current === null) return;
+    
+    const xui = avatarRef.current;
+    xui.addEventListener('loading-error', handleLoadingError);
+
+    return () => {
+      xui.removeEventListener('loading-error', handleLoadingError);
+    };
+  }, []);
 
   // handlers
   const handleCheckbox = (checbox: HTMLXuiCheckboxElement) => setImageEnabled(checbox.checked);
@@ -48,6 +61,7 @@ const AvatarDetail: FunctionComponent = () => {
     if (!size) return;
     setSize(size);
   }
+  const handleLoadingError = () => showToast({ text: 'Unable to load avatar image.' });
 
   return (
     <>
@@ -106,6 +120,7 @@ const AvatarDetail: FunctionComponent = () => {
           size={ size.value }
           initials="SB"
           src={ imageEnabled ? imageSource : '' }
+          ref={avatarRef}
         ></xui-avatar>
       </SampleBox>
 

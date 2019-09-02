@@ -8,6 +8,7 @@ import About from '../../pages/About/About';
 import NotFound from '../../pages/NotFound/NotFound';
 import Component from '../../pages/Component/Component';
 import Menu from '../HorizontalMenu/Menu';
+import ToastController from '../../wrappers/ToastControllerWrapper';
 
 const routes = (
   <Switch>
@@ -36,20 +37,23 @@ const routes = (
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Menu />
-      <div className={styles.wrapper}>
-        <div className={styles.content}>
-          { routes }
+    <>
+      <BrowserRouter>
+        <Menu />
+        <div className={styles.wrapper}>
+          <div className={styles.content}>
+            { routes }
 
-          <xui-grid>
-            <xui-grid-column>
-              <xui-text>Content</xui-text>
-            </xui-grid-column>
-          </xui-grid>
+            <xui-grid>
+              <xui-grid-column>
+                <xui-text>Content</xui-text>
+              </xui-grid-column>
+            </xui-grid>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+      <ToastController />
+    </>
   );
 }
 

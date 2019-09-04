@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useRef, useEffect } from 'react';
+import React, { FunctionComponent, useRef, useEffect, HTMLAttributes } from 'react';
 import { size } from '@xui/components/dist/types/components/avatar/avatar.size';
 
 interface AvatarProps {
@@ -8,7 +8,7 @@ interface AvatarProps {
   onError?: () => void;
 }
 
-const Avatar: FunctionComponent<AvatarProps> = ({
+const Avatar: FunctionComponent<HTMLAttributes<HTMLElement> & AvatarProps> = ({
   size = 'm',
   initials,
   src,
@@ -25,7 +25,7 @@ const Avatar: FunctionComponent<AvatarProps> = ({
     return () => {
       xui.removeEventListener('loading-error', onError);
     };
-  }, []);
+  }, [onError]);
 
   return (
     <xui-avatar

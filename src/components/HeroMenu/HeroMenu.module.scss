@@ -1,8 +1,10 @@
 @import "../../shared/variables";
 
 .hero {
+  background: $color-base;
   display: flex;
   justify-content: space-evenly;
+  position: relative;
   z-index: 1;
   width: 100%;
 }

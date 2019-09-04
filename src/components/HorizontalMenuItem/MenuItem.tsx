@@ -18,11 +18,7 @@ const MenuItem: FunctionComponent<MenuItemProps> = ({ label, path, children }) =
       >
         {label}
       </NavLink>
-      {children && 
-        <>
-          <div className={styles.children}>{children}</div>
-        </>
-      }
+      {children && <div className={styles.children}>{children}</div>}
     </li>
   );
 }

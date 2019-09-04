@@ -3,6 +3,7 @@
 .item {
   display: inline-block;
   margin-right: 20px;
+  position: relative;
 
   --xui-doc--icon: #{$color-font};
 
@@ -24,6 +25,7 @@
     cursor: pointer;
     display: block;
     line-height: 3rem;
+    margin: 20px 0;
     height: 3rem;
     padding: 0 1rem;
     position: relative;
@@ -46,11 +48,40 @@
   
   .children {
     background: $color-base;
+    border: 1px solid $color-border-400;
+    border-radius: 4px;
+    box-shadow: 0px 0 40px -12px $color-border-300;
     display: none;
     padding: 40px 0;
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: calc(100% - 12px);
+    //left: 0;
+    right: -80px;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    &:before {
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $color-border-400;
+      right: 132px;
+      bottom: 100%;
+      //transform: translateY(-50%);
+    }
+
+    &:after {
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid $color-base;
+      right: 132px;
+      bottom: calc(100% - 1px);
+      //transform: translateY(-50%);
+    }
   }
 }
